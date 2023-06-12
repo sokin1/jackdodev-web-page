@@ -1,27 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+header {
+  display: grid;
+  width: 100%;
+  height: 150px;
+  background-color: blue;
+}
+
+header div {
+  align-content: center;
+  background-color: bisque;
+}
+
+header div.name {
+  font-size: x-large;
+  align-self: end;
+  text-align: center;
+}
+
+header div.job {
+  font-size: large;
+  align-self: start;
+  text-align: center;
+}
+
+div.menu-bar {
+  font-size: medium;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-areas: "a a a";
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-list.menu {
+  grid-area: a;
+  grid-template-columns: 200px;
+}
+
+.contents {
+  background-color: blueviolet;
 }
